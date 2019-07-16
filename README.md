@@ -7,9 +7,3 @@ An attempt at building the News Summary Challenge, using `fetch`.
 ```
 open index.html
 ```
-
-## Testing
-
-```
-open SpecRunner.html
-```

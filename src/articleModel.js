@@ -1,6 +1,4 @@
-function ArticleModel() {
-
-}
+function ArticleModel() { }
 
 ArticleModel.prototype.getHeadlines = function() {
   return fetch('http://news-summary-api.herokuapp.com/guardian?apiRequestUrl=http://content.guardianapis.com/search?from-date=2019-07-01')
