@@ -4,7 +4,9 @@ function ArticleController(articleModel, articleView) {
 }
 
 ArticleController.prototype.updateDOM = function() {
-  // ask Model to get data and pass it to the view 
+  // ask Model to get data and pass it to the view
   this.model.getHeadlines()
-    .then((headlines) => this.view.render(headlines))
+    .then((headlines) => {
+      document.getElementById('app').innerHTML = this.view.render(headlines)
+    });
 }
