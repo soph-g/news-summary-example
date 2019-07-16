@@ -1,6 +1,4 @@
-function ArticleView() {
-
-}
+function ArticleView() { }
 
 ArticleView.prototype.render = function(articles) {
   return [
