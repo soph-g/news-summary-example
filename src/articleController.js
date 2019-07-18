@@ -3,9 +3,9 @@ function ArticleController(articleModel, articleView) {
   this.view = articleView;
 }
 
-ArticleController.prototype.updateDOM = function() {
-  this.model.getHeadlines()
+ArticleController.prototype.getHeadlines = function(domElement) {
+  this.model.allHeadlines()
     .then((headlines) => {
-      document.getElementById('app').innerHTML = this.view.render(headlines)
+      domElement.innerHTML = this.view.render(headlines)
     });
 }
