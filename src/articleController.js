@@ -4,8 +4,8 @@ function ArticleController(articleModel, articleView) {
 }
 
 ArticleController.prototype.getHeadlines = function(domElement) {
-  this.model.allHeadlines()
-    .then((headlines) => {
-      domElement.innerHTML = this.view.render(headlines)
-    });
+  var self = this;
+  this.model.allHeadlines(function(headlines) {
+    domElement.innerHTML = self.view.render(headlines)
+  });
 }
