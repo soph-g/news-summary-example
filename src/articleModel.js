@@ -10,7 +10,7 @@ ArticleModel.prototype.allHeadlines = function(cb) {
 }
 
 ArticleModel.prototype._getHeadlines = function(data) {
-  return data.response.results.map((article) => {
+  return data.response.results.map(function(article) {
     return {
       title: article.webTitle,
       id: article.id,
